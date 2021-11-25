@@ -30,7 +30,7 @@ spec:
   selector:
     app: jhooq-springboot
   ports:
-    - name: http
-      protocol: TCP
-      port: 80
-      targetPort: web
+  - protocol: TCP
+    port: 5000
+    targetPort: 8080
+    nodePort: 31112
