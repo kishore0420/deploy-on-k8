@@ -26,11 +26,11 @@ kind: Service
 metadata:
   name: kishoretest
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - protocol: TCP
-    nodePort: 31114
-    port: 4444
+  - port: 80
     targetPort: 8080
+    protocol: TCP
+    name: http
   selector:
     app: kishoretest
