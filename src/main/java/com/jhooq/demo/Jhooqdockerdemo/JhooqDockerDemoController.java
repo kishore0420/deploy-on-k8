@@ -1,4 +1,4 @@
-package com.kishore.demo.kishorek8demo;
+package com.jhooq.demo.Jhooqdockerdemo;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
