@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jhooq-springboot
+  name: kishoretest
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: jhooq-springboot
+      app: kishoretest
   template:
     metadata:
       labels:
-        app: jhooq-springboot
+        app: kishoretest
     spec:
       containers:
-        - name: springboot
+        - name: testdemo
           image: kishoreking90/gradletest:latest
           ports:
             - containerPort: 8080
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: jhooq-springboot
+  name: kishoretest
 spec:
   type: LoadBalancer
   selector:
-    app: jhooq-springboot
+    app: kishoretest
   ports:
   - protocol: TCP
     port: 5000
